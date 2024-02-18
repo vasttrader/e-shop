@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <meta name="description" content="E-Shop">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./animation.css">
+    <script src="./script.js" async></script>
+    <script>
+        const products = [{
+            handle: "lucky-jade-plant",
+            image_url: "http://127.0.0.1:5500/thumbnail.webp",
+            price: 299,
+            product_id: 1,
+            title: "Lucky Jade Plant",
+            variant_id: 1,
+            variant_title: "Default Title",
+        }];
+    </script>
+</head>
+
+<body class="bg-gray-200">
+    <header class="sticky top-0 z-20 h-[70px] bg-white flex items-center justify-between px-3 shadow-xl">
+        <img src="./logo.webp" alt="Logo" width="180" height="51">
+        <button type="button" class="w-[45px] h-[45px]" data-cart onclick="window.openDrawer()"></button>
+    </header>
+
+    <main>
+        <section class="py-6 md:py-12 max-w-7xl mx-auto md:px-4">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-px md:gap-4">
+                <div class="md:shadow-xl md:rounded-xl overflow-hidden relative">
+                    <div
+                        class="animate-[shine_2s_ease-in-out_infinite] bg-[length:400%_400%] bg-gradient-to-r from-yellow-800 via-yellow-600 to-yellow-800 text-white text-xs md:text-sm px-3.5 py-0.5 rounded-full absolute left-2 top-2 z-10">
+                        Bestseller
+                    </div>
+
+                    <figure class="w-full max-h-[200px] md:max-h-[360px] md:aspect-square overflow-hidden group">
+                        <img src="./mobile.webp" srcset="./mobile.webp 500w, ./desktop.webp 1500w" alt="Image"
+                            width="360" height="360" class="w-full group-hover:scale-150 transition-all">
+                    </figure>
+
+                    <div class="bg-white p-3 md:p-5">
+                        <div
+                            class="font-semibold text-yellow-900 md:text-lg leading-tight md:leading-normal line-clamp-2">
+                            Lucky Jade Plant
+                        </div>
+                        <div class="mb-3">
+                            <span class="md:text-xl text-yellow-600">
+                                &#9733;
+                            </span>
+                            <span class="text-emerald-800 text-sm md:text-base font-medium">
+                                4.8 | 120
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap gap-x-3 gap-y-2 mb-3">
+                            <span
+                                class="truncate text-emerald-900 bg-yellow-100 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Low Maintenance
+                            </span>
+                            <span
+                                class="truncate text-emerald-900 bg-emerald-50 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Vastu
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-3 mb-4">
+                            <div class="flex items-center gap-x-1">
+                                <span class="text-lg md:text-xl font-bold">
+                                    &#8377;299
+                                </span>
+                                <del class="text-xs md:text-sm text-yellow-900">
+                                    &#8377;699
+                                </del>
+                            </div>
+                            <div class="font-medium text-rose-600 text-sm md:text-base">
+                                57% OFF
+                            </div>
+                        </div>
+                        <button type="button" data-handle="lucky-jade-plant" onclick="addToCart(this)"
+                            class="active:scale-95 text-sm md:text-base block text-center bg-emerald-900 hover:bg-emerald-800 text-white w-full rounded-lg py-1.5 md:py-2 font-medium h-[40px] disabled:bg-gray-300 disabled:cursor-not-allowed">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:shadow-xl md:rounded-xl overflow-hidden relative">
+                    <div
+                        class="animate-[shine_2s_ease-in-out_infinite] bg-[length:400%_400%] bg-gradient-to-r from-yellow-800 via-yellow-600 to-yellow-800 text-white text-xs md:text-sm px-3.5 py-0.5 rounded-full absolute left-2 top-2 z-10">
+                        Bestseller
+                    </div>
+
+                    <figure class="w-full max-h-[200px] md:max-h-[360px] md:aspect-square overflow-hidden group">
+                        <img src="./mobile.webp" srcset="./mobile.webp 500w, ./desktop.webp 1500w" alt="Image"
+                            width="360" height="360" class="w-full group-hover:scale-150 transition-all">
+                    </figure>
+
+                    <div class="bg-white p-3 md:p-5">
+                        <div
+                            class="font-semibold text-yellow-900 md:text-lg leading-tight md:leading-normal line-clamp-2">
+                            Lucky Jade Plant
+                        </div>
+                        <div class="mb-3">
+                            <span class="md:text-xl text-yellow-600">
+                                &#9733;
+                            </span>
+                            <span class="text-emerald-800 text-sm md:text-base font-medium">
+                                4.8 | 120
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap gap-x-3 gap-y-2 mb-3">
+                            <span
+                                class="truncate text-emerald-900 bg-yellow-100 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Low Maintenance
+                            </span>
+                            <span
+                                class="truncate text-emerald-900 bg-emerald-50 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Vastu
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-3 mb-4">
+                            <div class="flex items-center gap-x-1">
+                                <span class="text-lg md:text-xl font-bold">
+                                    &#8377;299
+                                </span>
+                                <del class="text-xs md:text-sm text-yellow-900">
+                                    &#8377;699
+                                </del>
+                            </div>
+                            <div class="font-medium text-rose-600 text-sm md:text-base">
+                                57% OFF
+                            </div>
+                        </div>
+                        <button type="button" data-handle="lucky-jade-plant" onclick="addToCart(this)"
+                            class="active:scale-95 text-sm md:text-base block text-center bg-emerald-900 hover:bg-emerald-800 text-white w-full rounded-lg py-1.5 md:py-2 font-medium h-[40px] disabled:bg-gray-300 disabled:cursor-not-allowed">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="md:shadow-xl md:rounded-xl overflow-hidden relative">
+                    <div
+                        class="animate-[shine_2s_ease-in-out_infinite] bg-[length:400%_400%] bg-gradient-to-r from-yellow-800 via-yellow-600 to-yellow-800 text-white text-xs md:text-sm px-3.5 py-0.5 rounded-full absolute left-2 top-2 z-10">
+                        Bestseller
+                    </div>
+
+                    <figure class="w-full max-h-[200px] md:max-h-[360px] md:aspect-square overflow-hidden group">
+                        <img src="./mobile.webp" srcset="./mobile.webp 500w, ./desktop.webp 1500w" alt="Image"
+                            width="360" height="360" class="w-full group-hover:scale-150 transition-all">
+                    </figure>
+
+                    <div class="bg-white p-3 md:p-5">
+                        <div
+                            class="font-semibold text-yellow-900 md:text-lg leading-tight md:leading-normal line-clamp-2">
+                            Lucky Jade Plant
+                        </div>
+                        <div class="mb-3">
+                            <span class="md:text-xl text-yellow-600">
+                                &#9733;
+                            </span>
+                            <span class="text-emerald-800 text-sm md:text-base font-medium">
+                                4.8 | 120
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap gap-x-3 gap-y-2 mb-3">
+                            <span
+                                class="truncate text-emerald-900 bg-yellow-100 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Low Maintenance
+                            </span>
+                            <span
+                                class="truncate text-emerald-900 bg-emerald-50 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Vastu
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-3 mb-4">
+                            <div class="flex items-center gap-x-1">
+                                <span class="text-lg md:text-xl font-bold">
+                                    &#8377;299
+                                </span>
+                                <del class="text-xs md:text-sm text-yellow-900">
+                                    &#8377;699
+                                </del>
+                            </div>
+                            <div class="font-medium text-rose-600 text-sm md:text-base">
+                                57% OFF
+                            </div>
+                        </div>
+                        <button type="button" data-handle="lucky-jade-plant" onclick="addToCart(this)"
+                            class="active:scale-95 text-sm md:text-base block text-center bg-emerald-900 hover:bg-emerald-800 text-white w-full rounded-lg py-1.5 md:py-2 font-medium h-[40px] disabled:bg-gray-300 disabled:cursor-not-allowed">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="md:shadow-xl md:rounded-xl overflow-hidden relative">
+                    <div
+                        class="animate-[shine_2s_ease-in-out_infinite] bg-[length:400%_400%] bg-gradient-to-r from-yellow-800 via-yellow-600 to-yellow-800 text-white text-xs md:text-sm px-3.5 py-0.5 rounded-full absolute left-2 top-2 z-10">
+                        Bestseller
+                    </div>
+
+                    <figure class="w-full max-h-[200px] md:max-h-[360px] md:aspect-square overflow-hidden group">
+                        <img src="./mobile.webp" srcset="./mobile.webp 500w, ./desktop.webp 1500w" alt="Image"
+                            width="360" height="360" class="w-full group-hover:scale-150 transition-all">
+                    </figure>
+
+                    <div class="bg-white p-3 md:p-5">
+                        <div
+                            class="font-semibold text-yellow-900 md:text-lg leading-tight md:leading-normal line-clamp-2">
+                            Lucky Jade Plant
+                        </div>
+                        <div class="mb-3">
+                            <span class="md:text-xl text-yellow-600">
+                                &#9733;
+                            </span>
+                            <span class="text-emerald-800 text-sm md:text-base font-medium">
+                                4.8 | 120
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap gap-x-3 gap-y-2 mb-3">
+                            <span
+                                class="truncate text-emerald-900 bg-yellow-100 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Low Maintenance
+                            </span>
+                            <span
+                                class="truncate text-emerald-900 bg-emerald-50 text-xs font-medium px-3 py-0.5 rounded-full leading-normal">
+                                Vastu
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-3 mb-4">
+                            <div class="flex items-center gap-x-1">
+                                <span class="text-lg md:text-xl font-bold">
+                                    &#8377;299
+                                </span>
+                                <del class="text-xs md:text-sm text-yellow-900">
+                                    &#8377;699
+                                </del>
+                            </div>
+                            <div class="font-medium text-rose-600 text-sm md:text-base">
+                                57% OFF
+                            </div>
+                        </div>
+                        <button type="button" data-handle="lucky-jade-plant" onclick="addToCart(this)"
+                            class="active:scale-95 text-sm md:text-base block text-center bg-emerald-900 hover:bg-emerald-800 text-white w-full rounded-lg py-1.5 md:py-2 font-medium h-[40px] disabled:bg-gray-300 disabled:cursor-not-allowed">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <dialog id="drawer" class="backdrop:bg-black/40"></dialog>
+</body>
+
+</html>
