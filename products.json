@@ -1,0 +1,537 @@
+{
+    "data": [
+        {
+            "id": 31,
+            "body_html": "<p>Content</p>",
+            "handle": "sleeve-t-shirt",
+            "published_at": "2023-10-29T15:34:23.000000Z",
+            "ribbon": "Sale",
+            "status": {
+                "name": "Active",
+                "value": "active",
+                "text_color": "#083d25",
+                "background_color": "#cdfee1"
+            },
+            "title": "Sleeve T-shirt",
+            "type": "Plant",
+            "vendor": "Vast Trader",
+            "created_at": "2023-10-29T15:34:23.000000Z",
+            "updated_at": "2023-10-29T15:34:23.000000Z",
+            "image_url": null,
+            "images": [],
+            "variant": {
+                "id": 1,
+                "compare_at_price": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "image_id": null,
+                "inventory_item_id": 1,
+                "inventory_management": "admin",
+                "inventory_policy": "deny",
+                "inventory_quantity": 0,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "position": 1,
+                "price": 199,
+                "product_id": 31,
+                "sku": "1",
+                "taxable": true,
+                "title": "Default Title",
+                "weight": 0,
+                "weight_unit": "kg",
+                "created_at": "2023-10-29T15:34:23.000000Z",
+                "updated_at": "2023-10-29T15:34:23.000000Z",
+                "inventory_item": {
+                    "id": 1,
+                    "cost": 199,
+                    "country_code_of_origin": "IN",
+                    "country_harmonized_system_codes": null,
+                    "harmonized_system_code": "060220",
+                    "province_code_of_origin": null,
+                    "sku": "1",
+                    "tracked": true,
+                    "requires_shipping": true,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "inventory_levels": [
+                        {
+                            "id": 1,
+                            "available": 0,
+                            "committed": 0,
+                            "inventory_item_id": 1,
+                            "location_id": 1,
+                            "on_hand": 0,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            },
+            "options": [
+                {
+                    "id": 31,
+                    "name": "Title",
+                    "position": 1,
+                    "product_id": 31,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "values": [
+                        {
+                            "id": 31,
+                            "name": "Default Title",
+                            "option_id": 31,
+                            "position": 1,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "body_html": "<p>Content</p>",
+            "handle": "sleeve-t-shirt",
+            "published_at": "2023-10-29T15:34:23.000000Z",
+            "ribbon": "Sale",
+            "status": {
+                "name": "Active",
+                "value": "active",
+                "text_color": "#083d25",
+                "background_color": "#cdfee1"
+            },
+            "title": "Sleeve T-shirt",
+            "type": "Plant",
+            "vendor": "Vast Trader",
+            "created_at": "2023-10-29T15:34:23.000000Z",
+            "updated_at": "2023-10-29T15:34:23.000000Z",
+            "image_url": null,
+            "images": [],
+            "variant": {
+                "id": 1,
+                "compare_at_price": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "image_id": null,
+                "inventory_item_id": 1,
+                "inventory_management": "admin",
+                "inventory_policy": "deny",
+                "inventory_quantity": 0,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "position": 1,
+                "price": 199,
+                "product_id": 31,
+                "sku": "1",
+                "taxable": true,
+                "title": "Default Title",
+                "weight": 0,
+                "weight_unit": "kg",
+                "created_at": "2023-10-29T15:34:23.000000Z",
+                "updated_at": "2023-10-29T15:34:23.000000Z",
+                "inventory_item": {
+                    "id": 1,
+                    "cost": 199,
+                    "country_code_of_origin": "IN",
+                    "country_harmonized_system_codes": null,
+                    "harmonized_system_code": "060220",
+                    "province_code_of_origin": null,
+                    "sku": "1",
+                    "tracked": true,
+                    "requires_shipping": true,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "inventory_levels": [
+                        {
+                            "id": 1,
+                            "available": 0,
+                            "committed": 0,
+                            "inventory_item_id": 1,
+                            "location_id": 1,
+                            "on_hand": 0,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            },
+            "options": [
+                {
+                    "id": 31,
+                    "name": "Title",
+                    "position": 1,
+                    "product_id": 31,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "values": [
+                        {
+                            "id": 31,
+                            "name": "Default Title",
+                            "option_id": 31,
+                            "position": 1,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "body_html": "<p>Content</p>",
+            "handle": "sleeve-t-shirt",
+            "published_at": "2023-10-29T15:34:23.000000Z",
+            "ribbon": "Sale",
+            "status": {
+                "name": "Active",
+                "value": "active",
+                "text_color": "#083d25",
+                "background_color": "#cdfee1"
+            },
+            "title": "Sleeve T-shirt",
+            "type": "Plant",
+            "vendor": "Vast Trader",
+            "created_at": "2023-10-29T15:34:23.000000Z",
+            "updated_at": "2023-10-29T15:34:23.000000Z",
+            "image_url": null,
+            "images": [],
+            "variant": {
+                "id": 1,
+                "compare_at_price": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "image_id": null,
+                "inventory_item_id": 1,
+                "inventory_management": "admin",
+                "inventory_policy": "deny",
+                "inventory_quantity": 0,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "position": 1,
+                "price": 199,
+                "product_id": 31,
+                "sku": "1",
+                "taxable": true,
+                "title": "Default Title",
+                "weight": 0,
+                "weight_unit": "kg",
+                "created_at": "2023-10-29T15:34:23.000000Z",
+                "updated_at": "2023-10-29T15:34:23.000000Z",
+                "inventory_item": {
+                    "id": 1,
+                    "cost": 199,
+                    "country_code_of_origin": "IN",
+                    "country_harmonized_system_codes": null,
+                    "harmonized_system_code": "060220",
+                    "province_code_of_origin": null,
+                    "sku": "1",
+                    "tracked": true,
+                    "requires_shipping": true,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "inventory_levels": [
+                        {
+                            "id": 1,
+                            "available": 0,
+                            "committed": 0,
+                            "inventory_item_id": 1,
+                            "location_id": 1,
+                            "on_hand": 0,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            },
+            "options": [
+                {
+                    "id": 31,
+                    "name": "Title",
+                    "position": 1,
+                    "product_id": 31,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "values": [
+                        {
+                            "id": 31,
+                            "name": "Default Title",
+                            "option_id": 31,
+                            "position": 1,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "body_html": "<p>Content</p>",
+            "handle": "sleeve-t-shirt",
+            "published_at": "2023-10-29T15:34:23.000000Z",
+            "ribbon": "Sale",
+            "status": {
+                "name": "Active",
+                "value": "active",
+                "text_color": "#083d25",
+                "background_color": "#cdfee1"
+            },
+            "title": "Sleeve T-shirt",
+            "type": "Plant",
+            "vendor": "Vast Trader",
+            "created_at": "2023-10-29T15:34:23.000000Z",
+            "updated_at": "2023-10-29T15:34:23.000000Z",
+            "image_url": null,
+            "images": [],
+            "variant": {
+                "id": 1,
+                "compare_at_price": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "image_id": null,
+                "inventory_item_id": 1,
+                "inventory_management": "admin",
+                "inventory_policy": "deny",
+                "inventory_quantity": 0,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "position": 1,
+                "price": 199,
+                "product_id": 31,
+                "sku": "1",
+                "taxable": true,
+                "title": "Default Title",
+                "weight": 0,
+                "weight_unit": "kg",
+                "created_at": "2023-10-29T15:34:23.000000Z",
+                "updated_at": "2023-10-29T15:34:23.000000Z",
+                "inventory_item": {
+                    "id": 1,
+                    "cost": 199,
+                    "country_code_of_origin": "IN",
+                    "country_harmonized_system_codes": null,
+                    "harmonized_system_code": "060220",
+                    "province_code_of_origin": null,
+                    "sku": "1",
+                    "tracked": true,
+                    "requires_shipping": true,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "inventory_levels": [
+                        {
+                            "id": 1,
+                            "available": 0,
+                            "committed": 0,
+                            "inventory_item_id": 1,
+                            "location_id": 1,
+                            "on_hand": 0,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            },
+            "options": [
+                {
+                    "id": 31,
+                    "name": "Title",
+                    "position": 1,
+                    "product_id": 31,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "values": [
+                        {
+                            "id": 31,
+                            "name": "Default Title",
+                            "option_id": 31,
+                            "position": 1,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "id": 31,
+            "body_html": "<p>Content</p>",
+            "handle": "sleeve-t-shirt",
+            "published_at": "2023-10-29T15:34:23.000000Z",
+            "ribbon": "Sale",
+            "status": {
+                "name": "Active",
+                "value": "active",
+                "text_color": "#083d25",
+                "background_color": "#cdfee1"
+            },
+            "title": "Sleeve T-shirt",
+            "type": "Plant",
+            "vendor": "Vast Trader",
+            "created_at": "2023-10-29T15:34:23.000000Z",
+            "updated_at": "2023-10-29T15:34:23.000000Z",
+            "image_url": null,
+            "images": [],
+            "variant": {
+                "id": 1,
+                "compare_at_price": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "image_id": null,
+                "inventory_item_id": 1,
+                "inventory_management": "admin",
+                "inventory_policy": "deny",
+                "inventory_quantity": 0,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "position": 1,
+                "price": 199,
+                "product_id": 31,
+                "sku": "1",
+                "taxable": true,
+                "title": "Default Title",
+                "weight": 0,
+                "weight_unit": "kg",
+                "created_at": "2023-10-29T15:34:23.000000Z",
+                "updated_at": "2023-10-29T15:34:23.000000Z",
+                "inventory_item": {
+                    "id": 1,
+                    "cost": 199,
+                    "country_code_of_origin": "IN",
+                    "country_harmonized_system_codes": null,
+                    "harmonized_system_code": "060220",
+                    "province_code_of_origin": null,
+                    "sku": "1",
+                    "tracked": true,
+                    "requires_shipping": true,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "inventory_levels": [
+                        {
+                            "id": 1,
+                            "available": 0,
+                            "committed": 0,
+                            "inventory_item_id": 1,
+                            "location_id": 1,
+                            "on_hand": 0,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            },
+            "options": [
+                {
+                    "id": 31,
+                    "name": "Title",
+                    "position": 1,
+                    "product_id": 31,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "values": [
+                        {
+                            "id": 31,
+                            "name": "Default Title",
+                            "option_id": 31,
+                            "position": 1,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "body_html": "<p>Content</p>",
+            "handle": "sleeve-t-shirt",
+            "published_at": "2023-10-29T15:34:23.000000Z",
+            "ribbon": "Sale",
+            "status": {
+                "name": "Active",
+                "value": "active",
+                "text_color": "#083d25",
+                "background_color": "#cdfee1"
+            },
+            "title": "Sleeve T-shirt",
+            "type": "Plant",
+            "vendor": "Vast Trader",
+            "created_at": "2023-10-29T15:34:23.000000Z",
+            "updated_at": "2023-10-29T15:34:23.000000Z",
+            "image_url": null,
+            "images": [],
+            "variant": {
+                "id": 1,
+                "compare_at_price": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "image_id": null,
+                "inventory_item_id": 1,
+                "inventory_management": "admin",
+                "inventory_policy": "deny",
+                "inventory_quantity": 0,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "position": 1,
+                "price": 199,
+                "product_id": 31,
+                "sku": "1",
+                "taxable": true,
+                "title": "Default Title",
+                "weight": 0,
+                "weight_unit": "kg",
+                "created_at": "2023-10-29T15:34:23.000000Z",
+                "updated_at": "2023-10-29T15:34:23.000000Z",
+                "inventory_item": {
+                    "id": 1,
+                    "cost": 199,
+                    "country_code_of_origin": "IN",
+                    "country_harmonized_system_codes": null,
+                    "harmonized_system_code": "060220",
+                    "province_code_of_origin": null,
+                    "sku": "1",
+                    "tracked": true,
+                    "requires_shipping": true,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "inventory_levels": [
+                        {
+                            "id": 1,
+                            "available": 0,
+                            "committed": 0,
+                            "inventory_item_id": 1,
+                            "location_id": 1,
+                            "on_hand": 0,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            },
+            "options": [
+                {
+                    "id": 31,
+                    "name": "Title",
+                    "position": 1,
+                    "product_id": 31,
+                    "created_at": "2023-10-29T15:34:23.000000Z",
+                    "updated_at": "2023-10-29T15:34:23.000000Z",
+                    "values": [
+                        {
+                            "id": 31,
+                            "name": "Default Title",
+                            "option_id": 31,
+                            "position": 1,
+                            "created_at": "2023-10-29T15:34:23.000000Z",
+                            "updated_at": "2023-10-29T15:34:23.000000Z"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

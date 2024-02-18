@@ -25,7 +25,11 @@
 <body class="bg-gray-200">
     <header class="sticky top-0 z-20 h-[70px] bg-white flex items-center justify-between px-3 shadow-xl">
         <img src="./logo.webp" alt="Logo" width="180" height="51">
-        <button type="button" class="w-[45px] h-[45px]" data-cart onclick="window.openDrawer()"></button>
+
+        <div class="flex items-center gap-x-3">
+            <button type="button" class="w-[25px] h-[25px]" data-search onclick="window.openSearch()"></button>
+            <button type="button" class="w-[45px] h-[45px]" data-cart onclick="window.openDrawer()"></button>
+        </div>
     </header>
 
     <main>

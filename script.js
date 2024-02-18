@@ -1,5 +1,8 @@
 const cartElement = document.querySelector('[data-cart]');
-const drawerElement = document.getElementById("drawer");
+const drawerElement = document.getElementById('drawer');
+const searchElement = document.querySelector('[data-search]');
+const loadingElement = `<div style="border: 2px solid #f3f3f3; border-top: 2px solid #064E3B; border-radius: 50%; width: 20px; height: 20px; animation: spin 350ms linear infinite; margin: auto;"></div>`;
+let timer = undefined;
 
 window.getProductByHandle = function (handle) {
     return products.find(product => product.handle === handle);
@@ -10,7 +13,7 @@ window.getAllCartItem = function () {
 }
 
 window.getAllCartItemHTML = function () {
-    let cartItemsHTML = ``;
+    let cartItemsHTML = '';
 
     window.getAllCartItem().forEach(cartItem => {
         cartItemsHTML += `
@@ -54,6 +57,51 @@ window.getAllCartItemHTML = function () {
     });
 
     return cartItemsHTML;
+}
+
+window.getSearchHTML = function (products) {
+    let itemsHTML = '';
+
+    if (products.length === 0) {
+        itemsHTML += `
+            <div class="bg-white w-full rounded-lg shadow-lg p-2">
+                <div class="text-sm md:text-base text-center">
+                    <span>
+                        No results found!
+                    </span>
+                    <a class="text-emerald-900 underline" href="/">
+                        Explore our collections
+                    </a>
+                </div>
+            </div>
+        `;
+    }
+
+    products.forEach(product => {
+        itemsHTML += `
+            <a href="/products/${product.handle}" class="bg-white w-full rounded-lg shadow p-2 flex gap-x-4 gap-y-2 relative border border-transparent hover:border-emerald-800">
+                <figure class="shrink-0">
+                    <img src="${product.image_url === null ? './img-placeholder.webp' : product.image_url}" alt="Image" width="60" height="60" class="rounded">
+                </figure>
+
+                <div class="w-full flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+                    <div class="font-medium text-emerald-900 text-sm md:text-base line-clamp-2">
+                        ${product.title}
+                    </div>
+                    <div class="flex items-center gap-x-1">
+                        <span class="text-base md:text-lg font-semibold">
+                            ₹${product.variant.price}
+                        </span>
+                        <del class="text-xs md:text-sm text-yellow-900">
+                            ${product.variant.compare_at_price === null ? '' : '₹' + product.variant.compare_at_price}
+                        </del>
+                    </div>
+                </div>
+            </a>
+        `;
+    });
+
+    return itemsHTML;
 }
 
 window.incrementCartItemQuantity = function (element) {
@@ -138,7 +186,7 @@ window.addToCart = function (element) {
 
     element.disabled = true;
 
-    element.innerHTML = `<div style="border: 2px solid #f3f3f3; border-top: 2px solid #064E3B; border-radius: 50%; width: 20px; height: 20px; animation: spin 350ms linear infinite; margin: auto;"></div>`;
+    element.innerHTML = loadingElement;
 
     const product = window.getProductByHandle(element.dataset.handle);
 
@@ -251,4 +299,76 @@ window.refreshDrawer = function () {
     }
 }
 
+window.closeSearch = function () {
+    if (drawerElement) {
+        document.body.style.overflow = 'auto';
+
+        drawerElement.close();
+    }
+}
+
+window.openSearch = function () {
+    if (drawerElement) {
+        document.body.style.overflow = 'hidden';
+
+        drawerElement.innerHTML = `
+            <div class="flex flex-col fixed bg-gray-200 shadow top-0 lg:top-20 xl:top-48 left-0 lg:left-1/2 lg:-translate-x-1/2 w-full lg:max-w-lg z-30 lg:rounded-xl lg:shadow-xl">
+                <div class="flex items-center bg-white h-[50px] shadow-lg sticky top-0 z-10 lg:rounded-t-xl">
+                    <button type="button" onclick="window.closeSearch()" class="text-2xl shrink-0 px-4">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.5 10a.75.75 0 0 1-.75.75h-9.69l2.72 2.72a.75.75 0 0 1-1.06 1.06l-4-4a.75.75 0 0 1 0-1.06l4-4a.75.75 0 1 1 1.06 1.06l-2.72 2.72h9.69a.75.75 0 0 1 .75.75Z"/></svg>
+                    </button>
+
+                    <input autofocus onkeyup="window.refreshSearch(this)" placeholder="Type here to search products" type="search" autocomplete="off" class="w-full bg-transparent mr-4 focus:outline-none focus:ring-0">
+                </div>
+
+                <div class="space-y-2 px-2 lg:px-3 pt-3 pb-8 h-[calc(100vh-50px)] lg:h-96 overflow-y-auto" id="search-results"></div>
+            </div>
+        `;
+
+        drawerElement.showModal();
+    }
+}
+
+window.initSearch = function () {
+    if (!searchElement) return;
+
+    searchElement.innerHTML = `
+        <svg class="text-emerald-900 hover:scale-110" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" fill="none">
+            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z"></path>
+        </svg>
+    `;
+}
+
+window.refreshSearch = function (element) {
+    clearTimeout(timer);
+
+    if (!drawerElement) return;
+
+    const targetElement = document.getElementById('search-results');
+
+    if (!targetElement) return;
+
+    timer = setTimeout(async () => {
+        try {
+            targetElement.innerHTML = loadingElement;
+
+            await new Promise((resolve) => setTimeout(() => {
+                resolve(true);
+            }, 2000));
+
+            const response = await fetch('./products.json');
+
+            const { data } = await response.json();
+
+            targetElement.innerHTML = window.getSearchHTML(data);
+        } catch (error) {
+            targetElement.innerHTML = '';
+
+            console.error(error);
+        }
+    }, 300);
+}
+
 window.refreshCart();
+
+window.initSearch();
