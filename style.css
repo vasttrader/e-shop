@@ -920,8 +920,8 @@ video {
   max-height: 200px;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.min-h-svh {
+  min-height: 100svh;
 }
 
 .w-\[100px\] {

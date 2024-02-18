@@ -183,7 +183,7 @@ window.refreshDrawer = function () {
 
         if (window.getAllCartItem().length === 0) {
             drawerElement.innerHTML = `
-                <div class="flex flex-col fixed min-h-screen h-full bg-gray-200 shadow top-0 right-0 max-w-full w-[385px] z-30 overflow-y-auto">
+                <div class="flex flex-col fixed min-h-svh h-full bg-gray-200 shadow top-0 right-0 max-w-full w-[385px] z-30 overflow-y-auto">
                     <div class="py-3 px-4 text-right">
                         <button type="button" onclick="window.closeDrawer()" class="text-2xl">
                             &times;
@@ -218,7 +218,7 @@ window.refreshDrawer = function () {
         }
 
         drawerElement.innerHTML = `
-            <div class="flex flex-col fixed min-h-screen h-full bg-gray-200 shadow top-0 right-0 max-w-full w-[385px] z-30 overflow-y-auto">
+            <div class="flex flex-col fixed min-h-svh h-full bg-gray-200 shadow top-0 right-0 max-w-full w-[385px] z-30 overflow-y-auto">
                 <div class="bg-emerald-800 py-3 px-4 flex justify-between items-center gap-4">
                     <div class="text-white text-lg font-medium">
                         Shopping Cart
