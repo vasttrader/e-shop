@@ -290,9 +290,9 @@ window.refreshDrawer = function () {
                         </div>
                     </div>
             
-                    <button type="button" class="active:scale-95 text-sm md:text-base block text-center bg-emerald-900 hover:bg-emerald-800 text-white w-full rounded-lg py-1.5 md:py-2 font-medium h-[40px] disabled:bg-gray-300 disabled:cursor-not-allowed">
+                    <a href="/checkout.html" class="active:scale-95 text-sm md:text-base block text-center bg-emerald-900 hover:bg-emerald-800 text-white w-full rounded-lg py-1.5 md:py-2 font-medium h-[40px] disabled:bg-gray-300 disabled:cursor-not-allowed">
                         Checkout
-                    </button>
+                    </a>
                 </div>
             </div>
         `;

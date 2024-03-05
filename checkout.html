@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <meta name="description" content="E-Shop">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./animation.css">
+    <script src="./script.js" async></script>
+    <script>
+        const products = [{
+            handle: "lucky-jade-plant",
+            image_url: "./thumbnail.webp",
+            price: 299,
+            product_id: 1,
+            title: "Lucky Jade Plant",
+            variant_id: 1,
+            variant_title: "Default Title",
+        }];
+    </script>
+</head>
+
+<body>
+    <header class="bg-white border-b border-gray-300 px-4 lg:px-8">
+        <section class="h-[70px] grid grid-cols-2 items-center">
+            <img src="./logo.webp" alt="Logo" width="180" height="51">
+
+            <a href="/cart" class="w-[40px] h-[40px] ml-auto" aria-label="Cart">
+                <svg class="text-emerald-900 hover:scale-110" aria-hidden="true" focusable="false" role="presentation"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z">
+                    </path>
+                </svg>
+            </a>
+        </section>
+    </header>
+
+    <main class="grid lg:grid-cols-2">
+        <section class="lg:border-r">
+            <div class="p-4 lg:p-8 w-full max-w-xl space-y-6 mr-auto lg:mr-0 ml-auto">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-x-4 justify-between">
+                        <h3 class="font-semibold text-xl">
+                            Contact
+                        </h3>
+                        <div>
+                            <span class="text-gray-500">Have an account?</span>
+                            <a href="/login" class="text-emerald-800 underline">Log in</a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Email address" class="form-input w-full">
+                        <div class="relative">
+                            <div class="absolute top-1/2 -translate-y-1/2 pl-[12px] flex items-center gap-x-1">
+                                <img src="./indian-flag.webp" alt="Image" class="w-[24px] h-[24px] object-contain">
+                                <span>
+                                    +91
+                                </span>
+                            </div>
+                            <input type="tel" placeholder="Phone number" class="form-input w-full !pl-[72px]"
+                                minlength="0" maxlength="10">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex items-center gap-x-4 justify-between">
+                        <h3 class="font-semibold text-xl">
+                            Delivery
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" class="w-full form-input" placeholder="First name">
+                        <input type="text" class="w-full form-input" placeholder="Last name">
+                        <input type="text" class="col-span-2 w-full form-input" placeholder="Address">
+                        <input type="text" class="col-span-2 w-full form-input" placeholder="Apartment, suite, etc.">
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <input type="text" class="w-full form-input" placeholder="City">
+                        <select class="w-full form-select" aria-label="State">
+                            <option value="">Choose state</option>
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="CG">Chhattisgarh</option>
+                            <option value="DN">Dadra and Nagar Haveli</option>
+                            <option value="DD">Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TS">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UK">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                        </select>
+                        <input type="text" minlength="0" maxlength="6" class="w-full form-input" placeholder="PIN code">
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <input type="checkbox" id="save" class="w-[16px] h-[16px]">
+                        <label for="save" class="text-sm">Save this information for next time</label>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="font-semibold">
+                        Shipping method
+                    </h3>
+
+                    <label for="checkbox"
+                        class="flex justify-between items-center gap-x-4 border border-emerald-700 rounded bg-emerald-50 px-6 py-4">
+                        <input type="checkbox" id="checkbox" class="hidden">
+                        <div>
+                            Standard
+                        </div>
+                        <div>
+                            Free
+                        </div>
+                    </label>
+                </div>
+
+                <div class="space-y-3">
+                    <div>
+                        <h3 class="font-semibold text-xl">
+                            Payment
+                        </h3>
+                        <p class="text-gray-500 text-sm">
+                            All transactions are secure and encrypted.
+                        </p>
+                    </div>
+
+                    <label for="checkbox"
+                        class="flex justify-between items-center gap-x-4 border border-emerald-700 rounded bg-emerald-50 px-6 py-4">
+                        <input type="checkbox" id="checkbox" class="hidden">
+                        <div>
+                            Cash on delivery (COD)
+                        </div>
+                        <div>
+
+                        </div>
+                    </label>
+
+                    <button
+                        class="hidden lg:block w-full border border-zinc-300 rounded px-4 text-zinc-500 font-semibold bg-zinc-100 text-sm py-4">
+                        Pay now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sticky top-0 bg-zinc-50 lg:h-screen">
+            <div class="p-4 lg:p-8 w-full max-w-xl lg:max-w-md ml-auto lg:ml-0 mr-auto">
+                <h3 class="font-semibold mb-4">
+                    Order summary
+                </h3>
+                <div class="flex justify-between items-center mb-4">
+                    <div class="w-full max-w-xl mr-auto">
+                        <div class="flex gap-x-4">
+                            <div class="inline-block relative">
+                                <span
+                                    class="bg-zinc-500 text-white text-xs px-1.5 py-0.5 rounded-full absolute -top-2 -right-2">
+                                    100
+                                </span>
+                                <img src="./thumbnail.webp" alt="Image"
+                                    class="w-[64px] h-[64px] border object-contain rounded-lg">
+                            </div>
+                            <div>
+                                <div>
+                                    Example T-Shirt
+                                </div>
+                                <div class="text-gray-500 text-sm">
+                                    Small
+                                </div>
+                                <div class="text-gray-500 flex items-center gap-x-1">
+                                    <svg fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 14 14" focusable="false" aria-hidden="true">
+                                        <path stroke-linecap="round"
+                                            d="M7.284 1.402h4.964a.35.35 0 0 1 .35.35v4.964a.7.7 0 0 1-.205.495L7.49 12.115a.7.7 0 0 1-.99 0L1.885 7.5a.7.7 0 0 1 0-.99L6.79 1.607a.7.7 0 0 1 .495-.205Z">
+                                        </path>
+                                        <circle cx="9.1" cy="4.9" r="0.7"></circle>
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.102 4.897h-.005v.005h.005z"></path>
+                                    </svg>
+                                    <div class="text-gray-500 text-sm">
+                                        FLAT5 (-₹0.99)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <del class="text-zinc-500 text-sm">
+                            ₹19.00
+                        </del>
+                        <div>
+                            ₹19.00
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-x-3 mb-4">
+                    <input type="text" class="form-input w-full" placeholder="Discount code">
+                    <button class="border border-zinc-300 rounded px-4 text-zinc-500 font-semibold bg-zinc-100 text-sm">
+                        Apply
+                    </button>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center gap-x-3">
+                        <div>
+                            Subtotal
+                        </div>
+                        <div>
+                            ₹19.00
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center gap-x-3">
+                        <div>
+                            Shipping
+                        </div>
+                        <div>
+                            ₹00.00
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center gap-x-3">
+                        <div>
+                            <div class="text-lg font-medium">
+                                Total
+                            </div>
+                            <div class="text-xs text-gray-500 mb-2">
+                                Including ₹1.57 in taxes
+                            </div>
+                            <div class="text-xs flex items-center gap-x-2">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"
+                                    focusable="false" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m10.802 15.686 5.367-5.368a.15.15 0 0 0 .046-.109V4.144m-2.998-.95h-5.67a.16.16 0 0 0-.11.046L1.779 8.897a.154.154 0 0 0 0 .219l5.594 5.593c.06.06.158.06.218 0l5.658-5.657a.15.15 0 0 0 .045-.11v-5.67a.077.077 0 0 0-.077-.077Zm-3.06 3.749a.643.643 0 1 1-1.286 0 .643.643 0 0 1 1.286 0m-.648-.005h.01v.01h-.01z">
+                                    </path>
+                                </svg>
+                                <div class="font-medium">
+                                    TOTAL SAVINGS
+                                </div>
+                                <div>
+                                    ₹0.99
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-lg font-semibold">
+                            ₹19.00
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="mt-4 block lg:hidden w-full border border-zinc-300 rounded px-4 text-zinc-500 font-semibold bg-zinc-100 text-sm py-4">
+                    Pay now
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="grid lg:grid-cols-2 border-t px-4 lg:px-8 py-4 bg-white">
+        <div class="flex flex-wrap gap-x-4 gap-y-2 text-zinc-500">
+            <div class="text-sm">
+                All Rights Reserved
+            </div>
+            <a href="#" class="text-sm underline" target="_blank">
+                Privacy Policy
+            </a>
+        </div>
+    </footer>
+
+    <dialog id="drawer" class="backdrop:bg-black/40"></dialog>
+</body>
+
+</html>

@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-input {
+  @apply border rounded px-3 py-2.5 focus-visible:outline-emerald-700;
+}
+
+.form-input::placeholder {
+  @apply text-sm;
+}
+
+.form-select {
+  @apply border rounded px-3 py-2.5 focus-visible:outline-emerald-700;
+}
+
+.form-select option {
+  @apply text-sm;
+}
