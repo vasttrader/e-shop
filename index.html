@@ -26,11 +26,14 @@
     <header class="sticky top-0 z-20 h-[70px] bg-white flex items-center justify-between px-3 shadow-xl">
         <img src="./logo.webp" alt="Logo" width="180" height="51">
 
-        <div class="flex items-center gap-x-3">
+        <div class="flex items-center gap-x-4">
+            <button type="button" class="w-[25px] h-[25px]" aria-label="Account" data-account
+                onclick="window.openLoginModal()"></button>
+
             <button type="button" class="w-[25px] h-[25px]" aria-label="Search" data-search
                 onclick="window.openSearch()"></button>
-                
-            <button type="button" class="w-[45px] h-[45px]" aria-label="Cart" data-cart
+
+            <button type="button" class="w-[25px] h-[25px]" aria-label="Cart" data-cart
                 onclick="window.openDrawer()"></button>
         </div>
     </header>

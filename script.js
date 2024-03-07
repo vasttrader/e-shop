@@ -1,6 +1,7 @@
 const cartElement = document.querySelector('[data-cart]');
 const drawerElement = document.getElementById('drawer');
 const searchElement = document.querySelector('[data-search]');
+const accountElement = document.querySelector('[data-account]');
 const loadingElement = `<div style="border: 2px solid #f3f3f3; border-top: 2px solid #064E3B; border-radius: 50%; width: 20px; height: 20px; animation: spin 350ms linear infinite; margin: auto;"></div>`;
 let timer = undefined;
 
@@ -169,10 +170,10 @@ window.refreshCart = function () {
 
     cartElement.innerHTML = `
         <div class="relative">
-            <svg class="text-emerald-900 hover:scale-110" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+            <svg class="text-emerald-900 hover:scale-110" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="10 6 21 24" fill="none">
                 <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
             </svg>
-            <div class="absolute bottom-[6px] right-[6px] text-[10px] bg-emerald-800 rounded-full text-white w-[18px] h-[18px] grid place-items-center">
+            <div class="absolute -bottom-[6px] -right-[6px] text-[10px] bg-emerald-800 rounded-full text-white p-[1px_6px]">
                 ${window.getAllCartItem().length}
             </div>
         </div>
@@ -222,6 +223,131 @@ window.openDrawer = function () {
         document.body.style.overflow = 'hidden';
 
         drawerElement.showModal();
+    }
+}
+
+window.openLoginModal = function () {
+    if (drawerElement) {
+        document.body.style.overflow = 'hidden';
+
+        window.changeNumber();
+
+        drawerElement.showModal();
+    }
+}
+
+window.requestOtp = function () {
+    if (drawerElement) {
+        drawerElement.innerHTML = `
+            <button class="absolute text-2xl top- right-3" type="button" onclick="window.closeLoginModal()">
+                &times;
+            </button>
+            <div
+                class="grid grid-cols-1 lg:grid-cols-8 focus-within:border-0 max-w-[650px] min-h-[200px] max-h-[90vh] h-[460px] bg-white overflow-y-auto">
+                <div class="col-span-1 lg:col-span-3 bg-emerald-700 text-white p-8 flex flex-col justify-between h-full">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-4">
+                            Login
+                        </h3>
+                        <p>
+                            Get access to your Orders, Wishlist and Recommendations
+                        </p>
+                    </div>
+                    <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png" class="hidden lg:block mx-auto" width="222" height="140" alt="Image">
+                </div>
+                <div class="col-span-1 lg:col-span-5 p-8">
+                    <div class="max-w-[13rem] mx-auto mb-8">
+                        <p class="text-center">
+                            Please enter the OTP sent to
+                            7456897979. <button type="button" onclick="window.changeNumber()" class="text-blue-600">Change</button>
+                        </p>
+                        <div class="mt-16 flex justify-center gap-x-2">
+                            <input type="tel" minlength="0" maxlength="1"
+                                class="text-2xl font-medium border-b w-[30px] text-center focus-within:border-emerald-700 focus-within:outline-none">
+                            <input type="tel" minlength="0" maxlength="1"
+                                class="text-2xl font-medium border-b w-[30px] text-center focus-within:border-emerald-700 focus-within:outline-none">
+                            <input type="tel" minlength="0" maxlength="1"
+                                class="text-2xl font-medium border-b w-[30px] text-center focus-within:border-emerald-700 focus-within:outline-none">
+                            <input type="tel" minlength="0" maxlength="1"
+                                class="text-2xl font-medium border-b w-[30px] text-center focus-within:border-emerald-700 focus-within:outline-none">
+                            <input type="tel" minlength="0" maxlength="1"
+                                class="text-2xl font-medium border-b w-[30px] text-center focus-within:border-emerald-700 focus-within:outline-none">
+                            <input type="tel" minlength="0" maxlength="1"
+                                class="text-2xl font-medium border-b w-[30px] text-center focus-within:border-emerald-700 focus-within:outline-none">
+                        </div>
+                    </div>
+                    <button type="button" class="bg-emerald-700 text-white w-full py-3 px-6 text-sm shadow block">
+                        Verify
+                    </button>
+                    <div class="text-center text-sm mt-6 text-gray-500">
+                        Not received your code?
+                        <a href="" class="text-blue-600">
+                            Resend code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+window.changeNumber = function () {
+    if (drawerElement) {
+        drawerElement.innerHTML = `
+            <button class="absolute text-2xl top- right-3" type="button" onclick="window.closeLoginModal()">
+                &times;
+            </button>
+            <div class="grid grid-cols-1 lg:grid-cols-8 focus-within:border-0 max-w-[650px] min-h-[200px] max-h-[90vh] h-[460px] bg-white overflow-y-auto">
+                <div class="col-span-1 lg:col-span-3 bg-emerald-700 text-white p-8 flex flex-col lg:justify-between h-full">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-4">
+                            Login
+                        </h3>
+                        <p>
+                            Get access to your Orders, Wishlist and Recommendations
+                        </p>
+                    </div>
+                    <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png" class="hidden lg:block mx-auto" width="222" height="140" alt="Image">
+                </div>
+                <div class="col-span-1 lg:col-span-5 p-8 flex flex-col justify-between h-full gap-y-4">
+                    <div>
+                        <div class="mb-8">
+                            <label class="text-gray-500 text-sm">
+                                Enter Mobile number
+                            </label>
+                            <div>
+                                <span class="border-r pr-2">+91</span>
+                                <input type="tel" minlength="1" maxlength="10" class="pl-1.5 inline focus-visible:outline-none peer">
+
+                                <div class="border-b peer-focus-visible:border-emerald-700 transition-colors w-full mt-2"></div>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">
+                            By continuing, you agree to Flipkart's
+                            <a class="text-blue-600" href="">Terms of Use</a>
+                            and
+                            <a class="text-blue-600" href="">Privacy Policy</a>.
+                        </p>
+                        <button onclick="window.requestOtp()" type="button" class="bg-emerald-700 text-white w-full py-3 px-6 text-sm shadow block">
+                            Request OTP
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <a href="" class="text-blue-600 text-center text-sm">
+                            New to Vast Shop? Create an account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+window.closeLoginModal = function () {
+    if (drawerElement) {
+        document.body.style.overflow = 'auto';
+
+        drawerElement.close();
     }
 }
 
@@ -339,6 +465,16 @@ window.initSearch = function () {
     `;
 }
 
+window.initAccount = function () {
+    if (!accountElement) return;
+
+    accountElement.innerHTML = `
+        <svg class="text-emerald-900 hover:scale-110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="none" viewBox="0 0 18 19">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor" />
+        </svg>
+    `;
+}
+
 window.refreshSearch = function (element) {
     clearTimeout(timer);
 
@@ -374,3 +510,15 @@ window.refreshSearch = function (element) {
 window.refreshCart();
 
 window.initSearch();
+
+window.initAccount();
+
+Array.from(document.querySelectorAll('[type="tel"')).map((element) => {
+    element.addEventListener('keypress', function (event) {
+        let keyCode = event.keyCode;
+
+        if ((keyCode < 48 || keyCode > 57) && keyCode !== 8 && keyCode !== 46 && keyCode !== 9 && (keyCode < 37 || keyCode > 40)) {
+            event.preventDefault();
+        }
+    })
+})

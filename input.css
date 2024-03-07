@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
 .form-input {
   @apply border rounded px-3 py-2.5 focus-visible:outline-emerald-700;
 }
