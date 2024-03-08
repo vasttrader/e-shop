@@ -243,7 +243,7 @@ window.requestOtp = function () {
                 &times;
             </button>
             <div
-                class="grid grid-cols-1 lg:grid-cols-8 focus-within:border-0 max-w-[650px] min-h-[200px] max-h-[90vh] h-[460px] bg-white overflow-y-auto">
+                class="grid grid-cols-1 lg:grid-cols-8 focus-within:border-0 max-w-[650px] min-h-[200px] max-h-[90vh] h-[500px] bg-white overflow-y-auto">
                 <div class="col-span-1 lg:col-span-3 bg-emerald-700 text-white p-8 flex flex-col justify-between h-full">
                     <div>
                         <h3 class="text-2xl font-medium mb-4">
@@ -297,7 +297,7 @@ window.changeNumber = function () {
             <button class="absolute text-2xl top- right-3" type="button" onclick="window.closeLoginModal()">
                 &times;
             </button>
-            <div class="grid grid-cols-1 lg:grid-cols-8 focus-within:border-0 max-w-[650px] min-h-[200px] max-h-[90vh] h-[460px] bg-white overflow-y-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-8 focus-within:border-0 max-w-[650px] min-h-[200px] max-h-[90vh] h-[500px] bg-white overflow-y-auto">
                 <div class="col-span-1 lg:col-span-3 bg-emerald-700 text-white p-8 flex flex-col lg:justify-between h-full">
                     <div>
                         <h3 class="text-2xl font-medium mb-4">
@@ -317,7 +317,7 @@ window.changeNumber = function () {
                             </label>
                             <div>
                                 <span class="border-r pr-2">+91</span>
-                                <input type="tel" minlength="1" maxlength="10" class="pl-1.5 inline focus-visible:outline-none peer">
+                                <input type="tel" minlength="1" maxlength="10" class="pl-1.5 inline focus-visible:outline-none peer" autofocus>
 
                                 <div class="border-b peer-focus-visible:border-emerald-700 transition-colors w-full mt-2"></div>
                             </div>
@@ -522,3 +522,19 @@ Array.from(document.querySelectorAll('[type="tel"')).map((element) => {
         }
     })
 })
+
+const opImageWrappers = document.querySelectorAll(".op-image-wrapper")
+
+Array.from(opImageWrappers).forEach((opImageWrapper) => {
+    const img = opImageWrapper.querySelector("img");
+
+    function loaded() {
+        opImageWrapper.classList.add("op-image-loaded")
+    }
+
+    if (img.complete) {
+        loaded()
+    } else {
+        img.addEventListener("load", loaded)
+    }
+});

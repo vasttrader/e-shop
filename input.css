@@ -22,3 +22,22 @@ html {
 .form-select option {
   @apply text-sm;
 }
+
+.op-image-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    opacity: 0;
+  }
+
+  &:not(.op-image-loaded) {
+    filter: blur(7px);
+  }
+
+  &.op-image-loaded {
+    img {
+      opacity: 1;
+    }
+  }
+}
